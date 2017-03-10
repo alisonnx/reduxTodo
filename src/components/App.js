@@ -1,24 +1,14 @@
-import React, { Component } from 'react';
-import logo from '../logo.svg';
-import '../App.css';
-import AddTodoForm from '../containers/AddTodoForm';
-import VisibleTodoList from '../containers/DisplayTodoList';
-import Filter from './Filter';
+import React from 'react'
+import Footer from './Footer'
+import AddTodo from '../containers/AddTodo'
+import VisibleTodoList from '../containers/VisibleTodoList'
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <AddTodoForm/>
-        <VisibleTodoList/>
-        <Filter/>
-      </div>
-    );
-  }
-}
+const App = () => (
+  <div>
+    <AddTodo />
+    <VisibleTodoList />
+    <Footer />
+  </div>
+)
 
-export default App;
+export default App
